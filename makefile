@@ -5,7 +5,8 @@ SOURCES = \
 		  main.c \
 		  serial.c \
 		  led.c \
-		  timer.c
+		  timer.c \
+		  adc.c
 
 PORT = /dev/ttyACM0
 # Linux - /dev/ttyACM0
