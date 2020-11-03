@@ -1,5 +1,4 @@
 #include <avr/io.h>
-
 #include <stdio.h>
 
 #include "serial.h"
@@ -32,3 +31,10 @@ char uart_getchar(void) {
 	return UDR0;
 }
 
+void uart_putstr(const char *str){
+    // Lopp through the char array and put each char to uart_putchar function to print out
+    for (int i = 0; str[i] != '\0'; i++){
+        uart_putchar(str[i], NULL);
+        //_delay_ms(100);
+    }
+}
